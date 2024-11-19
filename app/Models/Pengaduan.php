@@ -9,10 +9,9 @@ class Pengaduan extends Model
 {
     use HasFactory;
 
-    protected $primarykey = 'id_pengaduan';
+    protected $primaryKey = 'id_pengaduan';
 
     protected $fillable = [
-        'id_pengaduan',
         'tgl_pengaduan',
         'nik',
         'judul_laporan',
@@ -21,7 +20,6 @@ class Pengaduan extends Model
         'lokasi_kejadian',
         'kategori_kejadian',
         'foto',
-        'status'
+        'status',
     ];
-
 }

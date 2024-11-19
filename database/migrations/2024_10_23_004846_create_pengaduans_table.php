@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pengaduan', function (Blueprint $table) {
+        Schema::create('pengaduans', function (Blueprint $table) {
             $table->id('id_pengaduan');
             $table->dateTime('tgl_pengaduan');
             $table->char('nik', 16);
@@ -26,7 +26,7 @@ return new class extends Migration
 
             $table->timestamps();
 
-            $table->foreign('nik')->references('nik')->on('masyarakat');
+            $table->foreign('nik')->references('nik')->on('masyarakats');
         });
     }
 
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pengaduan');
+        Schema::dropIfExists('pengaduans');
     }
 };
